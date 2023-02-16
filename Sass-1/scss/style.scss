@@ -1,0 +1,73 @@
+// npm i -g sass
+// sass --watch scss/style.scss css/style.css
+
+@import "./config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-light;
+  font-family: $font-stack;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+.showcase {
+  @include set-background($color-primary);
+  height: 600px;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li {
+        padding: 15px;
+      }
+    }
+
+    a:hover {
+      color: $color-secondary;
+    }
+  }
+
+  a {
+    color: set-text-color($color-primary);
+    transition: ease-in-out 0.3s all;
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+
+    img {
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@import "./utilities";
+@import "./buttons";
+@import "./mobile";

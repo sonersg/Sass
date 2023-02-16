@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.main .main__paragraph1, .main .main__paragraph2 {
+  color: lime;
+  font-weight: 800;
+}
+.main .main__paragraph1:hover, .main .main__paragraph2:hover {
+  color: black;
+}
+.main .main__paragraph2:hover {
+  color: white;
+}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    background-color: lime;
+  }
+}
+
+.light {
+  background: white;
+  color: black;
+}/*# sourceMappingURL=main.css.map */
